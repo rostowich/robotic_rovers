@@ -1,4 +1,6 @@
-package org.rover.domain;
+package org.rover.domain.referential;
+
+import org.rover.domain.referential.Orientation;
 
 public class Position {
 

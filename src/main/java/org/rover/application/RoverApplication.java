@@ -1,4 +1,4 @@
-package org.rover;
+package org.rover.application;
 
 /**
  * Hello world!

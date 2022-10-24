@@ -1,4 +1,4 @@
-package org.rover.domain;
+package org.rover.domain.referential;
 
 public enum Orientation {
 
