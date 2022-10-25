@@ -4,7 +4,7 @@ public enum Orientation {
 
     NORTH ("N",0,1,"W","E"),
     SOUTH("S",0,-1,"E","W"),
-    EAST("S",1,0,"N","S"),
+    EAST("E",1,0,"N","S"),
     WEST("W",-1,0,"S","N");
 
     private final String value;
