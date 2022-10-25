@@ -21,11 +21,12 @@ public enum Orientation {
         return value;
     }
 
-    public int getxMovement() {
+
+    public int getXMovement() {
         return xMovement;
     }
 
-    public int getyMovement() {
+    public int getYMovement() {
         return yMovement;
     }
 
