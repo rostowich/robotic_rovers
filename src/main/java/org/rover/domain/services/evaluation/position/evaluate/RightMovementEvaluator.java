@@ -1,19 +1,18 @@
 package org.rover.domain.services.evaluation.position.evaluate;
 
-import org.rover.domain.services.evaluation.exceptions.OutOfThePlateauException;
 import org.rover.domain.services.referentials.Orientation;
-import org.rover.domain.services.referentials.PositionInPlateau;
+import org.rover.domain.services.referentials.Position;
 
-public class RightMovementEvaluator implements MovementEvaluator{
+public class RightMovementEvaluator implements PositionEvaluator{
 
     @Override
-    public PositionInPlateau evaluateMovement(PositionInPlateau currentPositionInPlateau) throws OutOfThePlateauException {
+    public Position evaluate(Position currentPosition) {
 
         //Only the orientation will change. x and y will remain the same
-        Orientation currentOrientation = currentPositionInPlateau.getCurrentPosition().getOrientation();
+        Orientation currentOrientation = currentPosition.getOrientation();
         Orientation newOrientation = Orientation.orientationByValue(currentOrientation.getRightOrientation());
-        currentPositionInPlateau.getCurrentPosition().setOrientation(newOrientation);
+        currentPosition.setOrientation(newOrientation);
 
-        return currentPositionInPlateau;
+        return currentPosition;
     }
 }
