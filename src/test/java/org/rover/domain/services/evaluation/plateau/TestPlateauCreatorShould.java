@@ -11,7 +11,7 @@ public class TestPlateauCreatorShould {
     PlateauCreator plateauCreator = new PlateauCreator();
     @Test
     public void return_a_plateau_with_length_and_width(){
-        Plateau result = plateauCreator.init(5,5);
+        Plateau result = plateauCreator.init("5 5");
 
         int expectedLength = 5;
         int expectedWidth = 5;

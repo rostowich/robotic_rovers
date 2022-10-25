@@ -9,10 +9,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestPositionInitializerShould {
 
-    PositionInitializer initialPosition = new PositionInitializer();
+    final PositionInitializer initialPosition = new PositionInitializer();
     @Test
     public void return_a_plateau_with_length_and_width(){
-        Position result = initialPosition.init(1, 2, Orientation.NORTH);
+        Position result = initialPosition.init("1 2 N");
 
         int expectedX = 1;
         int expectedY = 2;

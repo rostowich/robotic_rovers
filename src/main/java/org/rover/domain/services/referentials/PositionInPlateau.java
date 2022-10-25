@@ -2,28 +2,20 @@ package org.rover.domain.services.referentials;
 
 public class PositionInPlateau {
 
-    private Position currentPosition;
+    private final Plateau plateau;
 
-    private Plateau plateau;
+    private final Position position;
 
-    public PositionInPlateau(Position currentPosition, Plateau plateau) {
-        this.currentPosition = currentPosition;
+    public PositionInPlateau(Plateau plateau, Position position) {
         this.plateau = plateau;
-    }
-
-    public Position getCurrentPosition() {
-        return currentPosition;
-    }
-
-    public void setCurrentPosition(Position currentPosition) {
-        this.currentPosition = currentPosition;
+        this.position = position;
     }
 
     public Plateau getPlateau() {
         return plateau;
     }
 
-    public void setPlateau(Plateau plateau) {
-        this.plateau = plateau;
+    public Position getPosition() {
+        return position;
     }
 }

@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestDisplayPositionShould {
     static ByteArrayOutputStream outContent;
-    static PrintStream originalOut = System.out;
+    static final PrintStream originalOut = System.out;
 
     @BeforeAll
     static void setUpStreams() {

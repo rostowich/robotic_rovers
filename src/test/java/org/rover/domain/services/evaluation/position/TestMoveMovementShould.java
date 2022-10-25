@@ -3,10 +3,11 @@ package org.rover.domain.services.evaluation.position;
 import org.junit.jupiter.api.Test;
 import org.rover.domain.services.evaluation.exceptions.OutOfThePlateauException;
 import org.rover.domain.services.evaluation.position.evaluate.MoveMovementEvaluator;
-import org.rover.domain.services.evaluation.position.evaluate.PositionEvaluator;
+import org.rover.domain.services.evaluation.position.evaluate.MovementEvaluator;
 import org.rover.domain.services.referentials.Orientation;
 import org.rover.domain.services.referentials.Plateau;
 import org.rover.domain.services.referentials.Position;
+import org.rover.domain.services.referentials.PositionInPlateau;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -17,12 +18,13 @@ public class TestMoveMovementShould {
 
         Position currentPosition = new Position(1,2, Orientation.NORTH);
         Plateau plateau = new Plateau(5,5);
-        PositionEvaluator moveMovement = new MoveMovementEvaluator(plateau);
+        PositionInPlateau currentPositionInPlateau = new PositionInPlateau(plateau, currentPosition);
+        MovementEvaluator moveMovement = new MoveMovementEvaluator();
 
         int expectedXPosition = 1;
         int expectedYPosition = 3;
         Orientation expectedOrientation = Orientation.NORTH;
-        Position result = moveMovement.evaluate(currentPosition);
+        Position result = moveMovement.evaluate(currentPositionInPlateau);
 
         assertEquals(result.getX(), expectedXPosition);
         assertEquals(result.getY(), expectedYPosition);
@@ -35,10 +37,11 @@ public class TestMoveMovementShould {
 
         Position currentPosition = new Position(4,5, Orientation.NORTH);
         Plateau plateau = new Plateau(5,5);
-        PositionEvaluator moveMovement = new MoveMovementEvaluator(plateau);
+        PositionInPlateau currentPositionInPlateau = new PositionInPlateau(plateau, currentPosition);
+        MovementEvaluator moveMovement = new MoveMovementEvaluator();
 
         Exception outOfThePlateauException = assertThrows(OutOfThePlateauException.class,
-                () ->  moveMovement.evaluate(currentPosition));
+                () ->  moveMovement.evaluate(currentPositionInPlateau));
 
         String expectedMessage = "You are out of the plateau";
         String actualMessage = outOfThePlateauException.getMessage();
