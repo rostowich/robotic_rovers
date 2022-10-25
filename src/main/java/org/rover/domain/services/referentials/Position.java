@@ -1,6 +1,4 @@
-package org.rover.domain.referential;
-
-import org.rover.domain.referential.Orientation;
+package org.rover.domain.services.referentials;
 
 public class Position {
 
@@ -20,12 +18,12 @@ public class Position {
         return x;
     }
 
-    public void setX(int x) {
-        this.x = x;
-    }
-
     public int getY() {
         return y;
+    }
+
+    public void setX(int x) {
+        this.x = x;
     }
 
     public void setY(int y) {

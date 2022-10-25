@@ -1,4 +1,4 @@
-package org.rover.domain.referential;
+package org.rover.domain.services.referentials;
 
 public class Plateau {
 

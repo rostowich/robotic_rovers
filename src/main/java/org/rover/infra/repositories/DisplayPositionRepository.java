@@ -1,6 +1,6 @@
 package org.rover.infra.repositories;
 
-import org.rover.domain.services.PositionRepository;
+import org.rover.domain.spi.PositionRepository;
 
 public class DisplayPositionRepository implements PositionRepository {
 

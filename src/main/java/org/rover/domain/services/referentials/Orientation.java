@@ -1,4 +1,4 @@
-package org.rover.domain.referential;
+package org.rover.domain.services.referentials;
 
 public enum Orientation {
 
@@ -45,7 +45,7 @@ public enum Orientation {
         this.rightOrientation = rightOrientation;
     }
 
-    Orientation orientationByValue (String value){
+    public static Orientation orientationByValue (String value){
         for (Orientation orientation : Orientation.values()){
             if (orientation.getValue().equals(value)){
                 return orientation;
