@@ -1,7 +1,7 @@
 package org.rover.domain.services.evaluation.position;
 
 import org.junit.jupiter.api.Test;
-import org.rover.domain.services.evaluation.exceptions.OutOfThePlateauException;
+import org.rover.domain.technical.exceptions.OutOfThePlateauException;
 import org.rover.domain.services.evaluation.position.evaluate.MovementEvaluator;
 import org.rover.domain.services.evaluation.position.evaluate.RightMovementEvaluator;
 import org.rover.domain.services.referentials.Orientation;

@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestPlateauCreatorShould {
 
-    PlateauCreator plateauCreator = new PlateauCreator();
+    final PlateauCreator plateauCreator = new PlateauCreator();
     @Test
     public void return_a_plateau_with_length_and_width(){
         Plateau result = plateauCreator.init("5 5");

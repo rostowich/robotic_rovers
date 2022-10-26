@@ -1,6 +1,6 @@
 package org.rover.domain.api;
 
-import org.rover.domain.services.evaluation.exceptions.OutOfThePlateauException;
+import org.rover.domain.technical.exceptions.OutOfThePlateauException;
 import org.rover.domain.services.evaluation.plateau.create.PlateauCreator;
 import org.rover.domain.services.evaluation.position.evaluate.PositionEvaluator;
 import org.rover.domain.services.evaluation.position.init.PositionInitializer;
