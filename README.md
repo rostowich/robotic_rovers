@@ -3,9 +3,13 @@
 ## Prerequisites
 java 11
 
-maven 3.8.6
+maven 3.8.6 (Only if you want to deploy by yourself)
 
-## Tests and Deployment steps
+## deployment (simplest method)
+- Try to download the source code of the project from github or just clone the project using a git command
+- Go into the "artifact folder" from the root directory and execute the following command on a terminal: java -jar rover.jar input.txt
+
+## Tests and Deployment steps (Second method)
 - Try to download the source code of the project from github or just clone the project using a git command
 - To test the application, make sure you are in the root directory of the 
 project and run the following maven command:
